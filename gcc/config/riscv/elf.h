@@ -20,6 +20,7 @@ along with GCC; see the file COPYING3.  If not see
 #define LINK_SPEC "\
 -melf" XLEN_SPEC "lriscv \
 %{mno-relax:--no-relax} \
+%{mbig-endian:-EB} \
 %{shared}"
 
 /* Link against Newlib libraries, because the ELF backend assumes Newlib.

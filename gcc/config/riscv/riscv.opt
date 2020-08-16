@@ -21,6 +21,14 @@
 HeaderInclude
 config/riscv/riscv-opts.h
 
+mbig-endian
+Target Report RejectNegative Mask(BIG_ENDIAN)
+Compile code for big endian mode.
+
+mlittle-endian
+Target Report RejectNegative InverseMask(BIG_ENDIAN)
+Compile code for little endian mode.  This is the default.
+
 mbranch-cost=
 Target RejectNegative Joined UInteger Var(riscv_branch_cost)
 -mbranch-cost=N	Set the cost of branches to roughly N instructions.

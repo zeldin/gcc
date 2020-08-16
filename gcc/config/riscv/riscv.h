@@ -66,6 +66,7 @@ extern const char *riscv_expand_arch (int argc, const char **argv);
 %{" FPIE_OR_FPIC_SPEC ":-fpic} \
 %{march=*} \
 %{mabi=*} \
+%{mbig-endian} \
 %(subtarget_asm_spec)"
 
 #undef DRIVER_SELF_SPECS
@@ -99,8 +100,8 @@ extern const char *riscv_expand_arch (int argc, const char **argv);
 /* Target machine storage layout */
 
 #define BITS_BIG_ENDIAN 0
-#define BYTES_BIG_ENDIAN 0
-#define WORDS_BIG_ENDIAN 0
+#define BYTES_BIG_ENDIAN (TARGET_BIG_ENDIAN)
+#define WORDS_BIG_ENDIAN (TARGET_BIG_ENDIAN)
 
 #define MAX_BITS_PER_WORD 64
 
